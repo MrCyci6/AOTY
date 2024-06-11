@@ -1,0 +1,4 @@
+node_modules
+databases/*
+potfiles/*
+config.json

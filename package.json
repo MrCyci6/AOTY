@@ -1,0 +1,16 @@
+{
+  "name": "aotry",
+  "version": "1.0.0",
+  "description": "Database searcher",
+  "main": "index.js",
+  "author": "MrCyci6",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "discord.js": "^14.15.3",
+    "express": "^4.18.1",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-discord": "^0.1.4"
+  }
+}

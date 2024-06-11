@@ -1,0 +1,2 @@
+username - id - firstIp - lastIp
+mrcyci6 - 1187442455268831232 - ::ffff:127.0.0.1 - ::ffff:127.0.0.1

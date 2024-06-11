@@ -1,0 +1,23 @@
+{
+	"bot": {
+		"token": "",
+		"id": "",
+		"secretId": "",
+		"port": 80,
+		"callbackUrl": "http://localhost:80/auth/discord/callback",
+		"scope": ["identify", "guilds.join"],
+		"maxSearchPerDay": 500
+	},
+
+	"server": {
+		"id": "1249034800950415382"
+	},
+
+	"roles": {
+		"customer": "1249690489523802202"
+	},
+
+	"owners": [
+		"1187442455268831232"
+	]
+}

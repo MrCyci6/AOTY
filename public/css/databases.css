@@ -1,0 +1,17 @@
+.list {
+    text-align: center;
+    margin: 10% auto 10%;
+
+    height: 100%;
+    width: 90%;
+}
+
+.card {
+    background-color: rgb(37, 37, 37);
+    border-radius: 15px;
+    padding: 1%;
+    
+    column-count: 4; 
+    column-gap: 5px;
+
+}
