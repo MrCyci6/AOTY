@@ -8,10 +8,6 @@ router.get('/', (req, res) => {
     res.sendFile(join(__dirname, "..", "static", 'searcher.html'));
 })
 
-router.get('/xwc', (req, res) => {
-    res.sendFile(join(__dirname, "..", "static", 'xwc.html'));
-})
-
 router.get('/about', (req, res) => {
     res.sendFile(join(__dirname, "..", "static", 'index.html'));
 })
