@@ -1,5 +1,5 @@
 const fs = require("fs");
-let searchInfos = require('../searchInfos.json');
+let searchInfos = require('../storage/searchInfos.json');
 const child_process = require('child_process');
 
 function checkValidSearch(text) {
@@ -45,7 +45,7 @@ function absSearch(text, test) {
 }
 
 function isBlacklist(test) {
-    const blacklist = fs.readFileSync("blacklist.txt", 'utf8').split("\n");
+    const blacklist = fs.readFileSync("./storage/blacklist.txt", 'utf8').split("\n");
     for (let i = 0; i < blacklist.length; i++) {
         const bl = blacklist[i];
         if (bl.toLowerCase() == test.toLowerCase()) {
@@ -110,7 +110,7 @@ function incrementSearchInfo(id) {
     }
     searchInfos[id] = data;
     let newInfos = JSON.stringify(searchInfos, null, 2);
-    fs.writeFileSync('./searchInfos.json', newInfos);
+    fs.writeFileSync('./storage/searchInfos.json', newInfos);
 }
 
 function cleanSearch() {
@@ -118,12 +118,12 @@ function cleanSearch() {
         searchInfos[i].day = 0;
     }
     let newInfos = JSON.stringify(searchInfos, null, 2);
-    fs.writeFileSync('./searchInfos.json', newInfos);
+    fs.writeFileSync('./storage/searchInfos.json', newInfos);
 }
 
 function searchLog(id, username, search) {
     let date = new Date();
-    fs.appendFileSync("./logs.txt", `${date.toDateString()} - ${username} (${id}) : ${search}\n`);
+    fs.appendFileSync("./storage/logs.txt", `${date.toDateString()} - ${username} (${id}) : ${search}\n`);
 }
 
 module.exports = {

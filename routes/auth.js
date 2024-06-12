@@ -16,17 +16,18 @@ router.get('/api/getprofil', async (req, res) => {
         });
 
         let ip = req.headers['x-forwarded-for'] || req.connection?.remoteAddress;
-        let ips = fs.readFileSync('./aoty_ips.txt', 'utf-8').replace(/\r/, "").split("\n");
+        let ips = fs.readFileSync('./storage/aoty_ips.txt', 'utf-8').replace(/\r/, "").split("\n");
         let ok = false;
-        ips.map(i => {
+        ips.forEach((i, index) => {
             let splitted = i.split(" - ");
             if(splitted[1] == req.user.id) {
                 ok = true;
-                return `${req.user.username} - ${req.user.id} - ${splitted[2]} - ${ip}`;
+                ips[index] = `${req.user.username} - ${req.user.id} - ${splitted[2]} - ${ip}`;
             }
         });
+        
         if(!ok) ips.push(`${req.user.username} - ${req.user.id} - ${ip} - ${ip}`);
-        fs.writeFileSync('./aoty_ips.txt', ips.join("\n"));
+        fs.writeFileSync('./storage/aoty_ips.txt', ips.join("\n"));
     } else {
         res.json({
             result: `Not connected`

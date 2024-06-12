@@ -1,7 +1,7 @@
 {
 	"bot": {
 		"token": "",
-		"id": "",
+		"id": "1249134019329916968",
 		"secretId": "",
 		"port": 80,
 		"callbackUrl": "http://localhost:80/auth/discord/callback",
@@ -10,11 +10,12 @@
 	},
 
 	"server": {
-		"id": "1249034800950415382"
+		"id": "1243249909595897866",
+		"embed": "#000000"
 	},
 
 	"roles": {
-		"customer": "1249690489523802202"
+		"customer": "1250404111392964608"
 	},
 
 	"owners": [
