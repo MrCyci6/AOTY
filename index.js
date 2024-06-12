@@ -14,7 +14,7 @@ const app = express();
 app.use(express.static('public'));
 app.use(session(
 	{ 
-		secret: 'Llmbuqzemoùih5qeùm#', 
+		secret: 'Llmbuqzemoùqzdqih5qeùm#', 
 		resave: false, 
 		saveUninitialized: false 
 	}
